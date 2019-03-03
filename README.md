@@ -1,6 +1,23 @@
 # NgrxDojo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+Project can be cloned from Nicolas's Github with:
+
+```bash
+git clone https://github.com/nperon/ngrx-dojo.git
+```
+
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0. 
+The following command lines were executed:
+
+```bash
+ng new ngrx-dojo
+cd ngrx-dojo
+npm install --save bootstrap
+npm install --save @ngrx/store
+npm install --save rxjs-compat
+ng generate component editable-svg
+ng generate module editable-svg
+```
 
 ## Development server
 
