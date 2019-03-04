@@ -1,4 +1,11 @@
 <svg height="200" width="200">
-    <circle cx="100" cy="100" r="40" stroke="black" stroke-width="3" fill="red" />
+    <circle 
+        [attr.cx]="(editableSvgState | async).xCoordinate" 
+        [attr.cy]="(editableSvgState | async).yCoordinate" 
+        [attr.r]="radius" 
+        stroke="black" 
+        stroke-width="3" 
+        fill="red" 
+    />
     Sorry, your browser does not support inline SVG.  
 </svg>
