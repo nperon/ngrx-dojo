@@ -12,11 +12,20 @@ The following command lines were executed:
 ```bash
 ng new ngrx-dojo
 cd ngrx-dojo
-npm install --save bootstrap
 npm install --save @ngrx/store
 npm install --save rxjs-compat
+npm install --save bootstrap
 ng generate component editable-svg
 ng generate module editable-svg
+```
+
+Table "styles" in Project angular.json file was complemented with new line to integrate Bootstrap style library:
+
+```javascript
+        "styles": [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "src/styles.css"
+        ],
 ```
 
 ## Development server

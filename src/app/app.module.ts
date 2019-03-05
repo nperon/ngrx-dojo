@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { EditableSvgComponent } from './editable-svg/editable-svg.component';
 import { editableSvgReducer } from './editable-svg/store/editable-svg.reducer';
 
+
 @NgModule({
   declarations: [
     AppComponent,
