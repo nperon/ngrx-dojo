@@ -17,7 +17,6 @@ export function editableSvgReducer(state = initialState, action) {
 
 const MOVE_LEFT = 'MOVE_LEFT';
 
-
 export class moveLeftAction {
     readonly type = MOVE_LEFT;
     constructor(public distance: number) {}
