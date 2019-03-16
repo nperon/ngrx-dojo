@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store'; 
 import { Observable } from 'rxjs/Observable';
-import { moveLeftAction } from './store/editable-svg.reducer';
 
 @Component({
   selector: 'app-editable-svg',
@@ -20,9 +19,5 @@ export class EditableSvgComponent implements OnInit {
 
   ngOnInit() {
     this.editableSvgState = this.store.select('editableSvg');
-  }
-
-  moveLeft() {
-    this.store.dispatch(new moveLeftAction(5));
   }
 }
