@@ -1,5 +1,5 @@
 const initialState = {
-        xCoordinate : 60,
+        xCoordinate : 140,
         yCoordinate : 140,
 }
 
