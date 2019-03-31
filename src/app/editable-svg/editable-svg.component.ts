@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store'; 
 import { Observable } from 'rxjs/Observable';
-import { moveLeftAction } from './store/editable-svg.reducer';
+import { moveLeftAction, updateTextAction } from './store/editable-svg.reducer';
 import { interval } from 'rxjs';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -17,11 +17,9 @@ export class EditableSvgComponent implements OnInit, OnDestroy {
   radius = 50;
   subscription: Subscription;
   userText: string;
-  textx = 100;
-  texty = 100;
 
   constructor(
-    private store: Store<{editableSvg: { xCoordinate: number, yCoordinate: number }}>
+    private store: Store<{editableSvg: { xCoordinate: number, yCoordinate: number, text: string }}>
   ) { }
 
   ngOnInit() {
@@ -42,11 +40,8 @@ export class EditableSvgComponent implements OnInit, OnDestroy {
     this.userText = event.target.value;
   }
 
-  onTextInput() {
-  }
-
   onActionButton() {
-    console.log(this.userText);
+    this.store.dispatch(new updateTextAction(this.userText));
   }
 
   ngOnDestroy() {
