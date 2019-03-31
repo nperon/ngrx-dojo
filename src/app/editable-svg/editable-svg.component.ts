@@ -16,6 +16,9 @@ export class EditableSvgComponent implements OnInit, OnDestroy {
   yCoordinate: number;
   radius = 50;
   subscription: Subscription;
+  userText: string;
+  textx = 100;
+  texty = 100;
 
   constructor(
     private store: Store<{editableSvg: { xCoordinate: number, yCoordinate: number }}>
@@ -33,6 +36,17 @@ export class EditableSvgComponent implements OnInit, OnDestroy {
 
   onMouseUpOrOut() {
     if (this.subscription !== undefined) { this.subscription.unsubscribe() };
+  }
+
+  onKey(event: any) {
+    this.userText = event.target.value;
+  }
+
+  onTextInput() {
+  }
+
+  onActionButton() {
+    console.log(this.userText);
   }
 
   ngOnDestroy() {
