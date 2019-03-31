@@ -21,8 +21,8 @@ export function editableSvgReducer(state = initialState, action) {
     }
 }
 
-const MOVE_LEFT = 'MOVE_LEFT';
-const UPDATE_TEXT = 'UPDATE_TEXT';
+export const MOVE_LEFT = 'MOVE_LEFT';
+export const UPDATE_TEXT = 'UPDATE_TEXT';
 
 export class moveLeftAction {
     readonly type = MOVE_LEFT;

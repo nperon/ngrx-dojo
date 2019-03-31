@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { moveLeftAction, updateTextAction } from './store/editable-svg.reducer';
 import { interval } from 'rxjs';
 import { Subscription } from 'rxjs/Subscription';
+import { WordEffects, fetchWordAndUpdateText } from './store/words.effects'; 
 
 @Component({
   selector: 'app-editable-svg',
@@ -42,6 +43,11 @@ export class EditableSvgComponent implements OnInit, OnDestroy {
 
   onActionButton() {
     this.store.dispatch(new updateTextAction(this.userText));
+  }
+
+  onButtonA() {
+    const action = new fetchWordAndUpdateText(this.userText);
+    this.store.dispatch(action);
   }
 
   ngOnDestroy() {
