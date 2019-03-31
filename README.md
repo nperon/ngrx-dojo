@@ -28,6 +28,13 @@ Table "styles" in Project angular.json file was complemented with new line to in
         ],
 ```
 
+Branch 04-words-from-api further requires fetching the ngrx effects package with:
+
+```bash
+npm install --save @ngrx/effects
+```
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
