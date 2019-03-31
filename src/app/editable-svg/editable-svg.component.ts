@@ -12,6 +12,7 @@ export class EditableSvgComponent implements OnInit {
   xCoordinate: number;
   yCoordinate: number;
   radius = 50;
+  userText: string;
 
   constructor(
     private store: Store<{editableSvg: { xCoordinate: number, yCoordinate: number }}>
@@ -19,5 +20,13 @@ export class EditableSvgComponent implements OnInit {
 
   ngOnInit() {
     this.editableSvgState = this.store.select('editableSvg');
+  }
+
+  onKey(event: any) {
+    this.userText = event.target.value;
+  }
+
+  onActionButton() {
+    console.log(this.userText);
   }
 }

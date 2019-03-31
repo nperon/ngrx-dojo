@@ -1,18 +1,27 @@
 <div class="row">
     <div class="col-10 border border-3 border-dark rounded p-0 m-0">
         <svg height="360" width="576">
+            <!-- RED DISK -->
             <circle 
                 [attr.cx]="(editableSvgState | async).xCoordinate" 
                 [attr.cy]="(editableSvgState | async).yCoordinate" 
                 [attr.r]="radius" 
                 fill="red" 
             />
+            <!-- TEXT IN THE RED DISK -->
+            <text
+                [attr.x]="(editableSvgState | async).xCoordinate - radius*0.85"
+                [attr.y]="(editableSvgState | async).yCoordinate"
+            >Hello World</text>
+            <!-- GREEN RECTANGLE -->
             <rect x="320" y="40" width="150" height="100" style="fill:green;opacity:0.5" />
         </svg>        
     </div>
 </div>
 <div class="row">
+    <!-- PANEL WITH RED BORDER -->
     <div class="col-5 border border-3 border-danger rounded p-2 m-0">
+        <!-- GROUP OF 9 BUTTONS WITH ARROWS -->
         <div class="btn-group-vertical m-2">
             <div class="btn-group">
                 <button type="button" class="btn btn-outline-primary">&#8662;</button>
@@ -30,18 +39,21 @@
                 <button type="button" class="btn btn-outline-primary">&#8664;</button>
             </div>
         </div>
+        <!-- BUTTONS A, B, C -->
         <div class="btn-group-vertical ml-2">
                 <button type="button" class="btn btn-outline-primary">A</button>
                 <button type="button" class="btn btn-outline-primary">B</button>
                 <button type="button" class="btn btn-outline-primary">C</button>
         </div>
+        <!-- TEXT INPUT WITH BUTTON -->
         <div class="input-group mt-2 mb-2">
-            <input type="text" class="form-control" placeholder="text">
-            <div class="input-group-append">
-                <span class="input-group-text" id="basic-addon2">action</span>
+                <input type="text" class="form-control" placeholder="text" (keyup)="onKey($event)">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2" (click)=onActionButton()>action</span>
+                </div>
             </div>
         </div>
-    </div>
+    <!-- PANEL WITH GREEN BORDER -->
     <div class="col-5 border border-3 border-success rounded p-2 m-0">
     </div>
 </div>
