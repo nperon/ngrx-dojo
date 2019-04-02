@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs/Subscription';
   styleUrls: ['./editable-svg.component.css']
 })
 export class EditableSvgComponent implements OnInit, OnDestroy {
-  editableSvgState: Observable<{ xCoordinate: number, yCoordinate: number }>;
+  editableSvgState: Observable<{ xCoordinate: number, yCoordinate: number, text: string }>;
   xCoordinate: number;
   yCoordinate: number;
   radius = 50;
