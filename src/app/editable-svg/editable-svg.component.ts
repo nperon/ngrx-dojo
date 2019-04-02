@@ -12,7 +12,7 @@ import { WordEffects, fetchWordAndUpdateText } from './store/words.effects';
   styleUrls: ['./editable-svg.component.css']
 })
 export class EditableSvgComponent implements OnInit, OnDestroy {
-  editableSvgState: Observable<{ xCoordinate: number, yCoordinate: number }>;
+  editableSvgState: Observable<{ xCoordinate: number, yCoordinate: number, text: string }>;
   xCoordinate: number;
   yCoordinate: number;
   radius = 50;
