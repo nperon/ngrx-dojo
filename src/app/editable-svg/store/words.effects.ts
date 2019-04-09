@@ -18,19 +18,7 @@ export class WordEffects {
     @Effect()
     fetchAndUpdate = this.actions$
         .pipe(
-            ofType(FETCH_SUGGESTION_AND_UPDATE_TEXT),
-            switchMap(
-                (action: fetchWordAndUpdateText) => {
-                    const obs: Observable<any> = this.wordsService.getSuggestion(action.word);
-                    return obs;
-                }
-            ),
-            map(
-                data => {
-                    const action = new updateTextAction(data[0].word);
-                    return action;
-                }
-            )            
+
         );
 
     constructor(
