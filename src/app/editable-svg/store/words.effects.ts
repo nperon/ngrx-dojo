@@ -15,11 +15,11 @@ export class fetchWordAndUpdateText {
 @Injectable()
 export class WordEffects {
 
-    @Effect()
-    fetchAndUpdate = this.actions$
-        .pipe(
+    // @Effect()
+    // fetchAndUpdate = this.actions$
+    //     .pipe(
 
-        );
+    //     );
 
     constructor(
         private actions$: Actions,
