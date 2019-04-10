@@ -27,13 +27,9 @@ export class EditableSvgComponent implements OnInit, OnDestroy {
   }
 
   onMouseDown() {
-    const clock = interval(400);
-    this.store.dispatch(new moveLeftAction(4));
-    this.subscription = clock.subscribe((number: Number) => { this.store.dispatch(new moveLeftAction(4)) });
   }
 
   onMouseUpOrOut() {
-    if (this.subscription !== undefined) { this.subscription.unsubscribe() };
   }
 
   onKey(event: any) {
