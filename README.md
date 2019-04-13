@@ -19,7 +19,7 @@ ng generate component editable-svg
 ng generate module editable-svg
 ```
 
-Table "styles" in Project angular.json file was complemented with new line to integrate Bootstrap style library:
+Table "styles" in angular.json file was complemented with new line to integrate Bootstrap style library:
 
 ```javascript
         "styles": [
